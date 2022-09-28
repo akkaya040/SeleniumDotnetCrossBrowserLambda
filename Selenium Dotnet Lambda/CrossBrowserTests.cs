@@ -47,10 +47,12 @@ namespace Selenium_Dotnet_Lambda
             ltOptions.Add("visual", true);
             ltOptions.Add("video", true);
             ltOptions.Add("network", true);
-            ltOptions.Add("tunnel", true);
             ltOptions.Add("platformName", os);
             ltOptions.Add("project", "Selenium Dotnet Lambda");
             ltOptions.Add("w3c", true);
+            ltOptions.Add("name",String.Format("{0}:{1}",
+                TestContext.CurrentContext.Test.ClassName,
+                TestContext.CurrentContext.Test.MethodName));
 
             if (browser.Equals("Chrome"))
             {
@@ -93,6 +95,7 @@ namespace Selenium_Dotnet_Lambda
         }
 
         [Test, Timeout(20000)]
+        [Category("Test1")] 
         public void Test1()
         {
             // 1. Open LambdaTest’s Selenium Playground from https://www.lambdatest.com/selenium-playground
