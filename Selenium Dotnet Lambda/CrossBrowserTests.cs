@@ -36,8 +36,8 @@ namespace Selenium_Dotnet_Lambda
         [SetUp]
         public void SetupBrowser()
         {
-            string username = "akkaya040";
-            string accesskey = "qxTSUCYNfDQtcDLwluTIjgoSEdqaZ6EU5l6blTRmPgigT7T7EY";
+            string username = "lambdaUserName";
+            string accesskey = "lambdaUserPass";
             string gridURL = "@hub.lambdatest.com/wd/hub";
 
 
